@@ -1,3 +1,3 @@
-g++ Header/login.h Src/login.cpp Src/main.cpp  -o main
+g++ Header/ReadDataFile.h  Header/login.h Src/login.cpp Src/ReadDataFile.cpp Src/main.cpp  -o a
 
-main.exe
+a.exe
