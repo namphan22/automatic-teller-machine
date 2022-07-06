@@ -22,11 +22,11 @@ int main()
  string user_password;
  uint64_t i;
 
- /*
+ 
  ReadDataFile(UserAccount, size_var);
  cout<<endl;
- cout<<size_var;
- */
+ 
+ 
  /*
  cout<<"Account number"<<setw(20)<<"Password"<<setw(20)<<"Balance"<<endl;
  
@@ -37,6 +37,10 @@ int main()
  */
 //wcout<<L"Hello Word";
 login(account_number,user_password);
+if(CheckUserAccount(UserAccount,account_number,user_password,size_var))
+{
+   cout<<"Login sucessively";
+}
 
  
 
