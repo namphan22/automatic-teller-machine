@@ -7,12 +7,36 @@ void login(uint64_t &account_number,string &user_password)
     cout<<"Enter account number";cin>>account_number;
     cout<<"Enter your password";
     login_password(user_password);
+   
     
 
 }
 bool CheckUserAccount(User_Account UserAccount[],uint64_t account_number,string user_password,uint64_t size_var)
 {
+    uint32_t i;
+    uint32_t left =0;
+    uint32_t right = size_var;
+    uint32_t mid_element;
+    while (left<=right)
+    {
+        mid_element = (left+right)/2;
 
+        if(UserAccount[mid_element].account_number == account_number)
+        {
+            return 1;
+        }
+        if(UserAccount[mid_element].account_number<account_number)
+        {
+            left =mid_element +1;
+        }
+        else
+        {
+            right = mid_element -1;
+        }
+    }
+    
+
+return 0;
     
 }
 void login_password(string &user_password)
@@ -39,14 +63,14 @@ void login_password(string &user_password)
     }
     if(ch == '\r')
     {
+        buffer_pass[i]='\0';
         Enter = true;
     }
    
  }
  //convert(buffer_pass,i);
- cout<<endl;
- cout<<i<<endl;
- cout<< convert(buffer_pass,i);
+
+ 
  
  
 }
